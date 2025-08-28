@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎬 CRUD de Filmes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🎬 CRUD Filmes</h1>
+
+  <!-- Menu de opções -->
+  <nav class="menu">
+    <div class="grupo">
+      <button class="btn" id="btn-todos">📚 Exibir todos</button>
+      <button class="btn" id="btn-carregar">📂 Carregar padrão</button>
+      <button class="btn" id="btn-ordenar-asc">⬆️ Ordenar por ano (asc)</button>
+      <button class="btn" id="btn-ordenar-desc">⬇️ Ordenar por ano (desc)</button>
+      <button class="btn btn-danger" id="btn-limpar">🧹 Limpar tudo</button>
+    </div>
+
+    <div class="grupo buscas">
+      <div class="busca">
+        <input type="text" id="busca-titulo" placeholder="Buscar por título" />
+        <button class="btn" id="btn-buscar-titulo">🔎</button>
+      </div>
+      <div class="busca">
+        <input type="text" id="busca-diretor" placeholder="Buscar por diretor" />
+        <button class="btn" id="btn-buscar-diretor">🔎</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Formulário CRUD -->
+  <form id="form-filme" class="card">
+    <input type="hidden" id="id" />
+    <div class="row">
+      <input type="text" id="titulo" placeholder="Título" required />
+      <input type="text" id="diretor" placeholder="Diretor" />
+      <input type="number" id="ano" placeholder="Ano" />
+    </div>
+    <button class="btn btn-primary" type="submit">💾 Salvar</button>
+  </form>
+
+  <!-- Lista de filmes -->
+  <section id="lista-filmes" class="grid"></section>
+
+  <script type="module" src="ui.js"></script>
+</body>
+</html>

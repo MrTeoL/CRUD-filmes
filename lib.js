@@ -97,6 +97,15 @@ const ordenarPorAno = (ascendente = true) =>
     return ascendente ? aa - bb : bb - aa;
   });
 
+const ordenarPorTitulo = (ascendente = true) =>
+  [...getFilmes()].sort((a, b) => {
+    const tituloA = (a.titulo || "").toLowerCase();
+    const tituloB = (b.titulo || "").toLowerCase();
+    if (tituloA < tituloB) return ascendente ? -1 : 1;
+    if (tituloA > tituloB) return ascendente ? 1 : -1;
+    return 0;
+  });
+
 //============================================================================
 // busca de filme na API (retorna objeto {titulo, ano, capa, sinopse} ou null)
 //============================================================================
@@ -186,6 +195,7 @@ export default {
   buscarPorTitulo,
   buscarPorDiretor,
   ordenarPorAno,
+   ordenarPorTitulo,
   buscarFilmeNaAPI,
   carregarCinemaPadrao,
   avaliarFilme

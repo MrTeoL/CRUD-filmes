@@ -1,6 +1,6 @@
 //Chave do localStorage e links da API
 const STORAGE_KEY = "filmes";
-const TMDB_API_KEY = "b3ce186277e97417faa9529f0f69872a";
+const TMDB_API_KEY = "3cfc45fe7990982c44020241308e3f59";
 const TMDB_BASE_URL = "https://api.themoviedb.org/3";
 const IMAGE_BASE = "https://image.tmdb.org/t/p/w500";
 

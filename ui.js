@@ -12,6 +12,8 @@ const btnMostrarTodos = document.getElementById("btn-todos");
 const btnCarregarPadrao = document.getElementById("btn-carregar");
 const btnOrdenarAsc = document.getElementById("btn-ordenar-asc");
 const btnOrdenarDesc = document.getElementById("btn-ordenar-desc");
+const btnOrdenarTituloAsc = document.getElementById("btn-ordenar-titulo-asc");
+const btnOrdenarTituloDesc = document.getElementById("btn-ordenar-titulo-desc");
 const btnLimpar = document.getElementById("btn-limpar");
 
 const inputBuscaTitulo = document.getElementById("busca-titulo");
@@ -138,6 +140,8 @@ btnCarregarPadrao.addEventListener("click", async () => {
 });
 btnOrdenarAsc.addEventListener("click", () => render(cinema.ordenarPorAno(true)));
 btnOrdenarDesc.addEventListener("click", () => render(cinema.ordenarPorAno(false)));
+btnOrdenarTituloAsc.addEventListener("click", () => render(cinema.ordenarPorTitulo(true)));
+btnOrdenarTituloDesc.addEventListener("click", () => render(cinema.ordenarPorTitulo(false)));
 btnLimpar.addEventListener("click", () => {
   if (confirm("Limpar tudo (isto apagará todos os filmes salvos)?")) {
     cinema.limparTudo();
